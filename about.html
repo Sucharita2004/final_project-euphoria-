@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <!--Flowbite css link  -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Font Awesome icons cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css">
+
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- TOPBAR -->
+        <div class="topbar bg-black py-2">
+            <div class="container max-w-7xl mx-auto">
+                <div class="text-white text-sm w-full">
+                    <div
+                        class="max-w-7xl ml-auto px-4 py-2 flex flex-col gap-2  sm:flex-row sm:items-center sm:justify-end sm:gap-0">
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-solid fa-phone text-pink"></i>
+                            +91 000 123 00
+                        </span>
+
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-regular fa-envelope text-pink"></i>
+                            contact1234@example.com
+                        </span>
+
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-solid fa-location-dot text-pink"></i>
+                            Lassen, Yuba City, California
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <div id="mainHeader" class="absolute top-10 left-0 w-full z-50 transition-all duration-300 pt-3">
+            <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 text-white">
+
+                <!-- Logo -->
+                <img src="./images/others/logo.png" alt="logo">
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider">
+                    <li class="hover:text-pink"><a href="./index.html">Home </a></li>
+
+                    <li class="relative group">
+                        <a href="./booking.html" class="hover:text-pink">Booking <i
+                                class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Service Details</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">news</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Membership</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">about</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hover:text-pink"><a href="./giftcard.html">Gift Card</a></li>
+
+                    <li class="relative group">
+                        <a href="./about.html" class="hover:text-pink text-pink">About Us<i
+                                class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">About Us</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">news</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Our Team</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <a href="./gallery.html" class="hover:text-pink">Gallery <i
+                                class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Blog</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Testimonial</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Event</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hover:text-pink"><a href="./contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Icons -->
+                <div class="hidden lg:flex gap-6 text-lg">
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-pink"></i>
+                    <i class="fa-solid fa-cart-shopping cursor-pointer hover:text-pink"></i>
+                    <i class="fa-regular fa-user cursor-pointer hover:text-pink"></i>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="menuBtn" class="lg:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden bg-black/95 text-white px-6 py-6 lg:hidden">
+                <ul class="flex flex-col gap-4 uppercase">
+                    <li><a href="./index.html">Home</a></li>
+
+                    <li id="mobileService" class="cursor-pointer"><a href="./booking.html">
+                            BOOKING <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <li id="mobileService" class="cursor-pointer"><a href="./giftcard.html"> GIFT CARD </a>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </li>
+                    <ul id="mobileDropdown" class="hidden pl-4 text-sm text-gray-300">
+                        <li class="py-2 hover:text-pink"><a href="#">Service Details</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Booking</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">news</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">about</a></li>
+                    </ul>
+
+                    <li><a href="./about.html">ABOUT US</a></li>
+                    <li><a href="./gallery.html">GALLERY</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Banner part -->
+        <section class="relative h-screen bg-cover bg-center "
+            style="background-image:url('./images/others/contact_banner.png');">
+            <!-- Content -->
+            <div class="relative z-10 h-full flex items-center justify-center text-center px-4 bg-black/60">
+                <div class=" text-white">
+                    <figure class="flex justify-center items-center">
+                        <img src="./images/products/faq.png" alt="faq" class="max-w-[172px] mb-5">
+                    </figure>
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-snug sm:leading-tight md:leading-tight">
+                        Home Of Relax And Respite
+                    </h1>
+                    <p class="text-xl sm:text-2xl md:text-3xl lg:text-3xl text-white mb-4 md:mb-6 leading-relaxed">
+                        The Best Spa Experience services you can Euphoria on
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg text-white tracking-wide">
+                        HOME &gt; ABOUT &gt; ABOUT US
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--About us  part-->
+        <section class="bg-white py-16 px-4">
+            <div class="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="w-full">
+                    <img src="./images/others/about.png" alt="about" class="w-full h-full object-cover rounded-2xl" />
+                </div>
+                <div class="md:text-left">
+                    <p class="flex justify-center items-center text-xl text-pink mb-4"><img
+                            src="./images/products/faq.png" alt="faq">ABOUT US</p>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl  text-gray-900 leading-snug sm:leading-tight md:leading-tight lg:leading-tight text-center px-4 md:px-0">
+                        Welcome To Home Of Tranquility, Relaxation And Respite
+                    </h2>
+
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Everybody is looking for places where to relax and get more energy. In our wellness center
+                        silence, energy, beauty and vitality meet. The treatments we offer will refresh both your body
+                        and soul. We'll be glad to welcome you and recommend our facilities and services.
+                    </p>
+                    <div class="flex mt-6">
+                        <p class="pe-9 flex justify-between items-center"><img src="./images/others/pink_arrow.png"
+                                alt="">15M+ Happy Clients</p>
+                        <p class="flex justify-between items-center"> <img src="./images/others/pink_arrow.png"
+                                alt="">Comprehensive Solution</p>
+                    </div>
+                    <div class="mt-9">
+                        <button type="submit"
+                            class="bg-pink text-white px-6 py-3 hover:bg-black transition flex justify-between items-center">
+                            KNOW MORE <img src="./images/others/arrow.png" alt="arrow">
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- view part -->
+        <section class="bg-pink">
+            <div class="bg-pink text-white mt-9 mx-auto max-w-7xl px-4">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-300">
+
+                    <!-- Item 1 -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center sm:items-start gap-4 py-8 px-5 text-center sm:text-left">
+                        <figure class="h-12 w-12 flex-shrink-0">
+                            <img src="./images/products/award-04.png" alt="img" class="w-full h-full object-contain">
+                        </figure>
+                        <div>
+                            <h3 class="text-3xl sm:text-4xl font-semibold">25+</h3>
+                            <p class="text-base">Year Of Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center sm:items-start gap-4 py-8 px-5 text-center sm:text-left">
+                        <figure class="h-12 w-12 flex-shrink-0">
+                            <img src="./images/products/smile.png" alt="img" class="w-full h-full object-contain">
+                        </figure>
+                        <div>
+                            <h3 class="text-3xl sm:text-4xl font-semibold">10k+</h3>
+                            <p class="text-base">Happy Clients</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center sm:items-start gap-4 py-8 px-5 text-center sm:text-left">
+                        <figure class="h-12 w-12 flex-shrink-0">
+                            <img src="./images/products/manager.png" alt="img" class="w-full h-full object-contain">
+                        </figure>
+                        <div>
+                            <h3 class="text-3xl sm:text-4xl font-semibold">250+</h3>
+                            <p class="text-base">Our Expert Teams</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center sm:items-start gap-4 py-8 px-5 text-center sm:text-left">
+                        <figure class="h-12 w-12 flex-shrink-0">
+                            <img src="./images/products/education.png" alt="img" class="w-full h-full object-contain">
+                        </figure>
+                        <div>
+                            <h3 class="text-3xl sm:text-4xl font-semibold">15+</h3>
+                            <p class="text-base">Students Enrolled</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- service part -->
+        <section class="py-20 relative h-full bg-cover bg-center bg-no-repeat  "
+            style="background-image:url('./images/products/about_section.png');">
+            <div class="container relative  max-w-6xl mx-auto px-4 py-12 space-y-10">
+                <p class="flex justify-center items-center text-xl text-pink mb-4"><img src="./images/products/faq.png"
+                        alt="faq">COMPANY BENEFITS</p>
+                <h2 class="text-5xl md:text-4xl text-gray-900 text-center">
+                    Why Choose Euphoria <br>Services
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+
+                    <div class="bg-white py-9 rounded-lg shadow hover:bg-black" data-aos="zoom-in-down">
+                        <p class="flex justify-center items-center text-xl text-pink mb-4 uppercase"><img
+                                src="./images/products/benefit1.png" alt="faq"> Affordable Luxury</p>
+                        <p class="text-gray-600 capitalize px-10 hover:text-white">
+                            Lorem Ipsum is simply dummy text of free available in market the printing and typesetting
+                            industry has been
+                        </p>
+                    </div>
+
+                    <div class="bg-white py-9 rounded-lg shadow hover:bg-black" data-aos="zoom-in-down">
+                        <p class="flex justify-center items-center text-xl text-pink mb-4 uppercase"><img
+                                src="./images/products/benefit2.png" alt="faq"> FIRST TIME FRIENDLY</p>
+                        <p class="text-gray-600 capitalize px-10 hover:text-white">
+                            Lorem Ipsum is simply dummy text of free available in market the printing and typesetting
+                            industry has been
+                        </p>
+                    </div>
+
+                    <div class="bg-white py-9 rounded-lg shadow hover:bg-black" data-aos="zoom-in-down">
+                        <p class="flex justify-center items-center text-xl text-pink mb-4 uppercase"><img
+                                src="./images/products/benefit3.png" alt="faq"> 5-Star Hospitality</p>
+                        <p class="text-gray-600 capitalize px-10 hover:text-white">
+                            Lorem Ipsum is simply dummy text of free available in market the printing and typesetting
+                            industry has been
+                        </p>
+                    </div>
+
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
+
+                    <div class="bg-white py-9 rounded-lg shadow hover:bg-black" data-aos="fade-right">
+                        <p class="flex justify-center items-center text-xl text-pink mb-4 uppercase"><img
+                                src="./images/products/benefit4.png" alt="faq">Streamlined Staffing</p>
+                        <p class="text-gray-600 capitalize px-10 hover:text-white">
+                            Lorem Ipsum is simply dummy text of free available in market the printing and typesetting
+                            industry has been
+                        </p>
+                    </div>
+
+                    <div class="bg-white py-9 rounded-lg shadow hover:bg-black" data-aos="fade-left">
+                        <p class="flex justify-center items-center text-xl text-pink mb-4 uppercase"><img
+                                src="./images/products/benefit5.png" alt="faq">Exceptional Support</p>
+                        <p class="text-gray-600 capitalize px-10 hover:text-white">
+                            Lorem Ipsum is simply dummy text of free available in market the printing and typesetting
+                            industry has been
+                        </p>
+                    </div>
+
+                </div>
+                <div class="absolute  left-[10px]">
+                    <figure>
+                        <img src="./images/products/shream.png" alt="shream">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- making part -->
+        <section class="py-30 relative h-full bg-cover bg-center bg-no-repeat  "
+            style="background-image:url('./images/products/story_banner.png');">
+            <div class="container relative  max-w-6xl mx-auto px-4 py-12 space-y-10">
+
+                <div class="flex flex-col lg:flex-row items-center iteam-center">
+                    <div class="px-6">
+                        <p class="flex justify-start items-center text-xl text-pink mb-4"><img
+                                src="./images/products/faq.png" alt="faq">OUR STORY</p>
+
+                        <h2 class="text-3xl lg:text-5xl mt-3 mb-6">
+                            The Concept of Making
+                            EUPHORIA
+                        </h2>
+
+                        <p class="text-gray-600 mb-8 max-w-lg">
+                            You can now purchase Euphoria Spa gift cards in anticipation of our grand opening. Treat
+                            yourself or surprise your loved ones with the promise of a unique spa experience.
+                        </p>
+
+                        <a href="#"
+                            class="inline-block bg-pink text-white px-6 py-3 text-sm uppercase tracking-wide hover:bg-black transition mb-10">
+                            Read More
+                        </a>
+                    </div>
+                    <div class="flex justify-center lg:justify-end group mb-10">
+                        <img src="./images/products/about1.png" alt="about"
+                            class=" object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110" />
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center iteam-center">
+                    <div class="flex justify-center lg:justify-end group">
+                        <img src="./images/products/about3.png" alt="about2"
+                            class=" object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110" />
+                    </div>
+                    <div class="px-10 ms-9">
+                        <p class="flex justify-start items-center text-xl text-pink mb-4"><img
+                                src="./images/products/faq.png" alt="faq">OUR STORY</p>
+
+                        <h2 class="text-3xl lg:text-5xl  mt-3 mb-6">
+                            The Inspiration of Making EUPHORIA
+                        </h2>
+
+                        <p class="text-gray-600 mb-8 max-w-lg">
+                            You can now purchase Euphoria Spa gift cards in anticipation of our grand opening. Treat
+                            yourself or surprise your loved ones with the promise of a unique spa experience.
+                        </p>
+
+                        <a href="#"
+                            class="inline-block bg-pink text-white px-6 py-3 text-sm uppercase tracking-wide hover:bg-black transition mb-10">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center iteam-center pt-10">
+                    <div class="px-6">
+                        <p class="flex justify-start items-center text-xl text-pink mb-4"><img
+                                src="./images/products/faq.png" alt="faq">OUR STORY</p>
+
+                        <h2 class="text-3xl lg:text-5xl mt-3 mb-6">
+                            Creating EUPHORIA
+                        </h2>
+
+                        <p class="text-gray-600 mb-8 max-w-lg">
+                            You can now purchase Euphoria Spa gift cards in anticipation of our grand opening. Treat
+                            yourself or surprise your loved ones with the promise of a unique spa experience.
+                        </p>
+
+                        <a href="#"
+                            class="inline-block bg-pink text-white px-6 py-3 text-sm uppercase tracking-wide hover:bg-black transition mb-10">
+                            Read More
+                        </a>
+                    </div>
+                    <div class="flex justify-center lg:justify-end group">
+                        <img src="./images/products/about2.png" alt="about2"
+                            class=" object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110" />
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- OUR ACHIVEMENTS part -->
+        <section class="py-20">
+            <div class="container max-w-7xl mx-auto">
+                <p class="flex justify-center items-center text-xl text-pink mb-4"><img src="./images/products/faq.png"
+                        alt="faq">OUR ACHIVEMENTS</p>
+                <h2 class="text-3xl lg:text-5xl text-center">Recent Awards And Recognition</h2>
+                <p class="text-2xl text-center text-gray-600 my-8">There are many variations of passages gaks of Lofrem
+                    the Ipsum availaasble, busat the majority have suffered alteration in some form sages gaks injected.
+                </p>
+                <img src="./images/products/achivements.png" alt="achivement">
+            </div>
+        </section>
+
+        <!-- nature part -->
+        <section class="nature py-10">
+            <div class="container max-w-7xl mx-auto px-4 py-10">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+                    <!-- Image 1 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural1.png" alt="Image 1"
+                            class="w-full max-w-[124px] object-contain">
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural2.png" alt="Image 2"
+                            class="w-full max-w-[130px] object-contain">
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural3.png" alt="Image 3"
+                            class="w-full max-w-[142px] object-contain">
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural4.png" alt="Image 4"
+                            class="w-full max-w-[161px] object-contain">
+                    </div>
+
+                    <!-- Image 5 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural5.png" alt="Image 5"
+                            class="w-full max-w-[98px] object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer class="bg-greay text-gray-300 font-display1">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#">
+                        <img src="./images/others/logo.png" alt="logo">
+                    </a>
+                    <ul>
+                        <li class="text-sm leading-relaxed max-w-xs mb-4">Phasellus ultricies aliquam volutpat
+                            ullamcorper laoreet neque, a lacinia curabitur lacinia
+                            mollis.</li>
+                        <li class="hover:text-pink"><a href="#"> <i class="fa-solid fa-location-dot text-pink mb-3"></i>
+                                Lassen, Yuba City, California</a></li>
+                        <li class="hover:text-pink"><a href="#"><i class="fa-solid fa-phone text-pink mb-3"></i>+91 000
+                                123 00</a></li>
+                        <div>
+                            <ul class="flex  gap-4">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube hover:text-pink"></i></a></li>
+                            </ul>
+                        </div>
+                    </ul>
+
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Quick Link</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> About Euphoria</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Services</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Shop</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Blog</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Our Services</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Body Sculpting</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Stone Massage</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Hair Restore</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Sauna Relax</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Thermal Bath</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Newsletters</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition">Sing Up For News & Get 30% Off for Your Next
+                                services.</a></li>
+                        <li><input type="text" placeholder="Your Email Address" class="bg-white text-black p-3 w-55">
+                        </li>
+                        <li class="mt-6"><a href="#"
+                                class="uppercase bg-pink px-19 py-3 text-white hover:text-pink hover:bg-white">subscribe</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-700 mt-12 pt-6 pb-10">
+            <div class="max-w-7xl mx-auto px-4
+           flex flex-col md:flex-row
+           items-center md:items-center
+           justify-between
+           text-sm text-gray-400">
+                <!-- Left: Copyright -->
+                <p class="mb-4 md:mb-0 text-center md:text-left">
+                    © 2024 Copyrights by
+                    <a href="#" class="hover:text-pink font-medium">Euphoria</a>.
+                    All Rights Reserved
+                </p>
+
+                <!-- Right: Links -->
+                <ul class="flex gap-6">
+                    <li>
+                        <a href="#" class="hover:text-pink">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-pink">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--Flowbite js  -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

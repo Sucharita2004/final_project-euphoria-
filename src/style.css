@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@utility container {
+  max-width: 1690px;
+  padding-inline: 0 15px;
+  margin-inline: 0 auto;
+}
+
+@theme {
+  --color-pink: #DE968D;
+  --color-black: #27252A;
+  --color-greay: #27252A;
+  --color-babypink: #FCF6F6;
+  --color-lightpink: #DE968D1A;
+  --color-giftpink: #F9D7E6;
+  --font-display: Marcellus;
+  --font-footer: Manrope;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons a {
+  display: inline-block;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+

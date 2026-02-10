@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!--Font Awesome icons cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body class="font-sans font-normal">
+    <header>
+        <!-- TOPBAR -->
+        <div class="topbar bg-black py-2">
+            <div class="container max-w-7xl mx-auto">
+                <div class="text-white text-sm w-full">
+                    <div
+                        class="max-w-7xl ml-auto px-4 py-2 flex flex-col gap-2  sm:flex-row sm:items-center sm:justify-end sm:gap-0">
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-solid fa-phone text-pink"></i>
+                            +91 000 123 00
+                        </span>
+
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-regular fa-envelope text-pink"></i>
+                            contact1234@example.com
+                        </span>
+
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-solid fa-location-dot text-pink"></i>
+                            Lassen, Yuba City, California
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <div id="mainHeader" class="absolute top-10 left-0 w-full z-50 transition-all duration-300 pt-3">
+            <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 text-white">
+
+                <!-- Logo -->
+                <img src="./images/others/logo.png" alt="logo">
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider">
+                    <li class="hover:text-pink"><a href="./index.html">Home </a></li>
+
+                    <li class="relative group">
+                        <a href="./booking.html" class="hover:text-pink text-pink">Booking <i
+                                class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Service Details</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">news</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Membership</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">about</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hover:text-pink"><a href="./giftcard.html">Gift Card</a></li>
+
+                    <li class="relative group">
+                        <a href="./about.html" class="hover:text-pink">About Us<i
+                                class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">About Us</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">news</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Our Team</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <a href="./gallery.html" class="hover:text-pink">Gallery <i
+                                class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Blog</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Testimonial</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Event</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hover:text-pink"><a href="./contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Icons -->
+                <div class="hidden lg:flex gap-6 text-lg">
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-pink"></i>
+                    <i class="fa-solid fa-cart-shopping cursor-pointer hover:text-pink"></i>
+                    <i class="fa-regular fa-user cursor-pointer hover:text-pink"></i>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="menuBtn" class="lg:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden bg-black/95 text-white px-6 py-6 lg:hidden">
+                <ul class="flex flex-col gap-4 uppercase">
+                    <li><a href="./index.html">Home</a></li>
+
+                    <li id="mobileService" class="cursor-pointer"><a href="./booking.html">
+                            BOOKING <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <li id="mobileService" class="cursor-pointer"><a href="./giftcard.html"> GIFT CARD </a>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </li>
+                    <ul id="mobileDropdown" class="hidden pl-4 text-sm text-gray-300">
+                        <li class="py-2 hover:text-pink"><a href="#">Service Details</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Booking</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">news</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">about</a></li>
+                    </ul>
+
+                    <li><a href="./about.html">ABOUT US</a></li>
+                    <li><a href="./gallery.html">GALLERY</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner part -->
+        <section class="relative h-screen bg-cover bg-center "
+            style="background-image:url('./images/others/gift_banner.png');">
+            <!-- Content -->
+            <div class="relative z-10 h-full flex items-center justify-center text-center px-4 ">
+                <div class=" text-white">
+                    <figure class="flex justify-center items-center">
+                        <img src="./images/products/faq.png" alt="faq" class=" max-w-[172px] mb-5">
+                    </figure>
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white mb-4 md:mb-6 leading-snug sm:leading-tight">
+                        Home Of Relax And Respite
+                    </h1>
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-6 leading-relaxed">
+                        The Best Spa Experience services you can Euphoria on
+                    </p>
+                    <p class="text-sm sm:text-base md:text-lg text-gray-300 tracking-wide">
+                        HOME &gt; SERVICES &gt; BOOKINGS
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--booking part  -->
+        <section>
+            <div class="min-h-[605px] bg-cover bg-center bg-no-repeat"
+                style="background-image: url('./images/products/booking_banner.png');">
+                <div class="text-center mb-12">
+                    <div class="flex justify-center items-center ">
+                        <figure>
+                            <img src="./images/others/card_logo.png" alt="faq" class="text-pink">
+                        </figure>
+                        <span class="text-white font-footer uppercase text-xl font-semibold mt-7">BOOKING</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl  text-white mt-3">
+                        Appointment Details
+                    </h2>
+
+                </div>
+            </div>
+        </section>
+        <!--Form part  -->
+        <section class="py-20 bg-gray-50 ">
+            <div class="container max-w-5xl mx-auto px-4">
+                <!-- Form -->
+                <form class="bg-white p-6 md:p-10 rounded-xl shadow-lg space-y-6">
+                    <!-- Steps -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3  mb-12">
+                        <div class="font-semibold text-black  py-4">
+                            1. Details
+                            <figure class="mt-3 pe-9">
+                                <img src="./images/products/rulerPink.png" alt="rulerPink">
+                            </figure>
+                        </div>
+                        <div class="font-semibold text-black  py-4">
+                            2. Payment
+                            <figure class="mt-3 pe-9">
+                                <img src="./images/products/ruler1.png" alt="ruler1">
+                            </figure>
+                        </div>
+                        <div class="font-semibold text-black py-4">
+                            3. Done
+                            <figure class="mt-3 pe-9">
+                                <img src="./images/products/ruler1.png" alt="ruler1">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Name & Email -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Your Name*</label>
+                            <input type="text" placeholder="your name"
+                                class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Your Email*</label>
+                            <input type="email" placeholder="your email"
+                                class="w-full border border-gray-300  px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+                        </div>
+                    </div>
+
+                    <!-- Service & Date -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Select Service*</label>
+                            <select
+                                class="w-full border border-gray-300  px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                <option>Select a service</option>
+                                <option>Full Body Massage</option>
+                                <option>Relax Therapy</option>
+                                <option>Skin Care</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Select Date*</label>
+                            <input type="date"
+                                class="w-full border border-gray-300  px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500" />
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Message*</label>
+                        <textarea rows="4" placeholder="Write  message"
+                            class="w-full border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                    </div>
+
+                    <!-- Note -->
+                    <div class="text-sm text-gray-500">
+                        <i class="fa-solid fa-triangle-exclamation text-black"></i>
+                        Please note that the date and time you requested may not be available.
+                        We will contact you to confirm your actual appointment details.
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center mt-10 mb-6">
+                        <button type="submit" class="bg-pink text-white px-10 py-3  hover:bg-black transition">
+                            SUBMIT</i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+
+        <!-- work part -->
+        <section class="work ">
+            <div class="container  w-full bg-cover bg-center bg-no-repeat bg-lightpink"
+                style="background-image: url('./images/products/booking_img.png');">
+
+                <div class=" mx-auto  py-16">
+                    <!-- Headings -->
+                    <div class="text-center mb-12">
+                        <div class="flex justify-center items-center ">
+                            <figure>
+                                <img src="./images/others/card_logo.png" alt="faq" class="text-pink">
+                            </figure>
+                            <span class="text-pink font-footer uppercase text-xl font-semibold mt-7">Easy
+                                step</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl  text-black mt-3">
+                            How It Works?
+                        </h2>
+
+                    </div>
+
+                    <!-- 3 Column Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-white max-w-[1320px] mx-auto">
+
+                        <!-- Card 1 -->
+                        <div class=" text-center p-10">
+                            <img src="./images/products/step1.png" alt="Step 1" class="w-20 h-20 mx-auto mb-6" />
+                            <h3 class="text-xl font-semibold mb-2">
+                                Make an Appointment
+                            </h3>
+                            <p class="text-gray-600">
+                                In a free hour, when our power of choice is untrammelled when nothing prevents
+                                dolor sit amet consectetur.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="text-center p-10 border-l border-white">
+                            <img src="./images/products/step2.png" alt="Step 2" class="w-20 h-20 mx-auto mb-6" />
+                            <h3 class="text-xl font-semibold mb-2">
+                                Get Consultation
+                            </h3>
+                            <p class="text-gray-600">
+                                In a free hour, when our power of choice is untrammelled when nothing prevents
+                                dolor sit amet consectetur.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="text-center p-10 border-l border-white">
+                            <img src="./images/products/step3.png" alt="Step 3" class="w-20 h-20 mx-auto mb-6" />
+                            <h3 class="text-xl font-semibold mb-2">
+                                Enjoy Our Massages
+                            </h3>
+                            <p class="text-gray-600">
+                                In a free hour, when our power of choice is untrammelled when nothing prevents
+                                dolor sit amet consectetur.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="bg-greay text-gray-300 font-display1">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#">
+                        <img src="./images/others/logo.png" alt="logo">
+                    </a>
+                    <ul>
+                        <li class="text-sm leading-relaxed max-w-xs mb-4">Phasellus ultricies aliquam volutpat
+                            ullamcorper laoreet neque, a lacinia curabitur lacinia
+                            mollis.</li>
+                        <li class="hover:text-pink"><a href="#"> <i class="fa-solid fa-location-dot text-pink mb-3"></i>
+                                Lassen, Yuba City, California</a></li>
+                        <li class="hover:text-pink"><a href="#"><i class="fa-solid fa-phone text-pink mb-3"></i>+91
+                                000
+                                123 00</a></li>
+                        <div>
+                            <ul class="flex  gap-4">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube hover:text-pink"></i></a></li>
+                            </ul>
+                        </div>
+                    </ul>
+
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Quick Link</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> About Euphoria</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Services</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Shop</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Blog</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Our Services</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Body Sculpting</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Stone Massage</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Hair Restore</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Sauna Relax</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Thermal Bath</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Newsletters</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition">Sing Up For News & Get 30% Off for Your
+                                Next
+                                services.</a></li>
+                        <li><input type="text" placeholder="Your Email Address" class="bg-white text-black p-3 w-55">
+                        </li>
+                        <li class="mt-6"><a href="#"
+                                class="uppercase bg-pink px-19 py-3 text-white hover:text-pink hover:bg-white">subscribe</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-700 mt-12 pt-6 pb-10">
+            <div class="max-w-7xl mx-auto px-4
+           flex flex-col md:flex-row
+           items-center md:items-center
+           justify-between
+           text-sm text-gray-400">
+                <!-- Left: Copyright -->
+                <p class="mb-4 md:mb-0 text-center md:text-left">
+                    © 2024 Copyrights by
+                    <a href="#" class="hover:text-pink font-medium">Euphoria</a>.
+                    All Rights Reserved
+                </p>
+
+                <!-- Right: Links -->
+                <ul class="flex gap-6">
+                    <li>
+                        <a href="#" class="hover:text-pink">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-pink">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
