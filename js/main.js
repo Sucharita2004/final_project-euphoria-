@@ -130,7 +130,7 @@ $(document).ready(function () {
 });
 
 // TESTIMONIAL
-new Swiper(".testimonialSwiper", {
+var testimonialSwiper = new Swiper(".testimonialSwiper", {
     slidesPerView: "auto",
     spaceBetween: 20,
     loop: true,
@@ -143,13 +143,16 @@ new Swiper(".testimonialSwiper", {
     },
 });
 // wide section
-new Swiper(".hoverExpandSwiper", {
+var hoverExpandSwiper = new Swiper(".hoverExpandSwiper", {
     slidesPerView: 5,
     spaceBetween: 16,
     speed: 600,
     breakpoints: {
         0: {
-            slidesPerView: 1.2,
+            slidesPerView: 1,
+        },
+        575: {
+            slidesPerView: 1,
         },
         640: {
             slidesPerView: 2,
@@ -163,18 +166,18 @@ new Swiper(".hoverExpandSwiper", {
     },
 });
 // leftToRight
-new Swiper(".leftToRightServiceSwiper", {
+var leftToRightServiceSwiper = new Swiper(".leftToRightServiceSwiper", {
     slidesPerView: "auto",
     spaceBetween: 40,
     loop: true,
-    speed: 6000, 
+    speed: 6000,
     autoplay: {
-      delay: 0,
-      reverseDirection: true, 
-      disableOnInteraction: false,
+        delay: 0,
+        reverseDirection: true,
+        disableOnInteraction: false,
     },
-    allowTouchMove: false, 
-  });
+    allowTouchMove: false,
+});
 //  aos 
 AOS.init();
 // form validation
